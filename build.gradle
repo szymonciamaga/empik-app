@@ -1,0 +1,49 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+
+group = 'pl.empik'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.5.5'
+
+    implementation 'org.hibernate:hibernate-core:5.5.7.Final'
+
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.5'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.5'
+    implementation 'org.liquibase:liquibase-core:4.4.3'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools:2.5.5'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.5'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.5'
+    implementation 'org.postgresql:postgresql:42.2.24.jre7'
+
+    // modules removed from jdk 11
+    implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+    implementation 'com.sun.xml.bind:jaxb-impl:3.0.1'
+    implementation 'com.sun.xml.bind:jaxb-core:3.0.1'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.5'
+    implementation 'org.springframework.boot:spring-boot-starter-batch:2.5.5'
+    implementation 'org.springframework.boot:spring-boot-starter-aop:2.5.5'
+
+}

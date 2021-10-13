@@ -1,0 +1,9 @@
+
+DROP SCHEMA IF EXISTS public CASCADE;
+
+-- SCHEMA: empik
+
+-- DROP SCHEMA empik;
+
+CREATE SCHEMA IF NOT EXISTS empik
+    AUTHORIZATION postgres;

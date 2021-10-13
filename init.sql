@@ -1,0 +1,4 @@
+CREATE DATABASE IF NOT EXISTS empik-db;
+
+CREATE SCHEMA IF NOT EXISTS db_changelog
+    AUTHORIZATION postgres;
